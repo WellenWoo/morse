@@ -1,0 +1,44 @@
+# -*- coding:utf-8 -*-
+#:kivy 1.0
+
+<Morse>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        TextInput:
+            id:input
+            #text:'input area'
+            multiline:True
+            background_color: .7, .7, 1, 1
+            font_size : 24
+
+        TextInput:
+            id:output
+            #text:'output area'
+            multiline:True
+            font_size : 24
+
+        BoxLayout:
+            orientation:'horizontal'
+
+            Button:
+                id:decode_btn
+                text: 'Decode '
+                font_size : 24
+                size_hint_y: .2
+                on_press: root.Decode()
+
+            Button:
+                id: encode_btn
+                text: 'Encode'
+                font_size : 24
+                size_hint_y: .2
+                on_press:root.Encode()
+
+            Button:
+                id:exit_btn
+                text:'Exit'
+                font_size : 24
+                size_hint_y: .2
+                on_release: exit()

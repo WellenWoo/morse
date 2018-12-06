@@ -35,7 +35,7 @@ class MainWindow(wx.Frame):
         self.findData = wx.FindReplaceData()
 
         """创建状态栏"""
-        elf.CreateStatusBar()   
+        self.CreateStatusBar()   
         
         """file菜单布局"""
         filemenu = wx.Menu()
@@ -159,7 +159,6 @@ a skilled listener or observer without special equipment.\n''',
             br = data.GetMarginBottomRight()
         dlg.Destroy()
             
-      """Exit 函数  """
     def OnExit(self,event):
         self.Close(True)
         
